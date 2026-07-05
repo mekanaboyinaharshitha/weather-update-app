@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌦 Weather Forecast | Harshitha</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Live Clock -->
+    <div id="clock"></div>
+
+    <div class="app">
+
+        <!-- Dark / Light Mode -->
+        <button onclick="toggleMode()" class="mode" title="Toggle Theme">
+            🌙
+        </button>
+
+        <h1>🌦 Weather Forecast</h1>
+
+        <p class="subtitle">
+            Search any city and get real-time weather updates.
+        </p>
+
+        <!-- Search -->
+        <div class="search">
+
+            <div class="search-box">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    id="cityInput"
+                    type="text"
+                    placeholder="Enter city name">
+
+            </div>
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+        </div>
+
+        <!-- Loading -->
+        <div id="loading">
+
+            <div class="spinner"></div>
+
+            <p>Fetching Weather...</p>
+
+        </div>
+
+        <!-- Weather Card -->
+        <div class="card">
+
+            <div class="top">
+
+                <img
+                    id="flag"
+                    width="45"
+                    alt="Country Flag">
+
+                <h2 id="city">
+                    --
+                </h2>
+
+            </div>
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon">
+
+            <h1 id="temp">
+                --
+            </h1>
+
+            <p id="desc">
+                --
+            </p>
+
+            <div class="info">
+
+                <p>
+                    🌡 <strong>Feels Like</strong><br>
+                    <span id="feels"></span>
+                </p>
+
+                <p>
+                    💧 <strong>Humidity</strong><br>
+                    <span id="humidity"></span>
+                </p>
+
+                <p>
+                    🌬 <strong>Wind</strong><br>
+                    <span id="wind"></span>
+                </p>
+
+                <p>
+                    🧭 <strong>Pressure</strong><br>
+                    <span id="pressure"></span>
+                </p>
+
+                <p>
+                    👀 <strong>Visibility</strong><br>
+                    <span id="visibility"></span>
+                </p>
+
+                <p>
+                    🌅 <strong>Sunrise</strong><br>
+                    <span id="sunrise"></span>
+                </p>
+
+                <p>
+                    🌇 <strong>Sunset</strong><br>
+                    <span id="sunset"></span>
+                </p>
+
+            </div>
+
+            <button onclick="getLocation()">
+                📍 My Location
+            </button>
+
+        </div>
+        <!-- Forecast -->
+        <div class="forecast">
+
+            <h3>📅 5-Day Forecast</h3>
+
+            <div id="days"></div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Developed with ❤️ by
+                <strong>Harshitha Mekanaboyina</strong>
+            </p>
+
+            <p class="footer-text">
+                Built using HTML • CSS • JavaScript • OpenWeather API
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- Click Sound -->
+    <audio
+        id="clickSound"
+        src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
